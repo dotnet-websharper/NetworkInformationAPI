@@ -15,7 +15,7 @@ module Client =
     type IndexTemplate = Template<"wwwroot/index.html", ClientLoad.FromDocument>
 
     let statusMessage = Var.Create "Checking network status..."
-    let connection = As<Navigator>(JS.Window.Navigator).Connection
+    let connection = JS.Window.Navigator.Connection
 
     let updateNetworkInfo() =
         try            

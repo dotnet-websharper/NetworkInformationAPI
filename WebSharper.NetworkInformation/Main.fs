@@ -23,16 +23,9 @@ module Definition =
             |> WithSourceName "OnChange"
         ]
 
-    let Navigator =
-        Class "Navigator"
-        |+> Instance [
-            "connection" =? NetworkInformation
-        ]
-
     let Assembly =
         Assembly [
             Namespace "WebSharper.NetworkInformation" [
-                Navigator
                 NetworkInformation
             ]
         ]

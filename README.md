@@ -79,7 +79,7 @@ module Client =
     let statusMessage = Var.Create "Checking network status..."
 
     // Get the Network Information API object
-    let connection = As<Navigator>(JS.Window.Navigator).Connection
+    let connection = JS.Window.Navigator.Connection
 
     // Function to update network status information
     let updateNetworkInfo() =
