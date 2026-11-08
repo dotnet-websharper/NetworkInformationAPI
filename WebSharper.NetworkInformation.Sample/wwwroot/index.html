@@ -1,21 +1,37 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Network Information API Sample</title>
+    <title>WebSharper Network Information API Demo</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%234f46e5'/%3E%3Cpath d='M3 11c1.5 0 2.5-1 2.5-2.5S4.5 6 3 6M6 11c2.5 0 4.5-2 4.5-4.5S8.5 2 6 2' stroke='white' stroke-width='1.6' fill='none'/%3E%3Ccircle cx='11' cy='11' r='1.4' fill='white'/%3E%3C/svg%3E" />
     <link rel="stylesheet" type="text/css" href="Content/WebSharper.NetworkInformation.Sample.css" />
-    <style>
-        /* Don't show the not-yet-loaded templates */
-        [ws-template], [ws-children-template] { display: none; }
-    </style>
+    <link rel="stylesheet" type="text/css" href="site.css" />
     <script type="module" src="Content/WebSharper.NetworkInformation.Sample.head.js"></script>
 </head>
 <body>
-    <h1>Network Information API</h1>
-    <div id="main" ws-children-template="Main">
-        <p id="status">${Status}</p>
-    </div>
+    <main class="page">
+        <header class="hero">
+            <h1>Network Information API Demo</h1>
+            <p class="lede">
+                Read the connection type and quality with the
+                <a href="https://developer.mozilla.org/en-US/docs/Web/API/Network_Information_API" target="_blank" rel="noreferrer">Network Information API</a>.
+                The values update when the connection changes.
+            </p>
+        </header>
+
+        <section class="card">
+            <h2>Connection</h2>
+            <p class="hint">Reads <code>navigator.connection</code> and listens to its <code>change</code> event.</p>
+            <p class="status" role="status">${status}</p>
+            <dl class="readout">
+                <dt>Effective type</dt><dd>${effectiveType}</dd>
+                <dt>Downlink</dt><dd>${downlink} Mbps</dd>
+                <dt>RTT</dt><dd>${rtt} ms</dd>
+                <dt>Save data</dt><dd>${saveData}</dd>
+            </dl>
+        </section>
+    </main>
     <script type="module" src="Content/WebSharper.NetworkInformation.Sample.min.js"></script>
 </body>
 </html>
