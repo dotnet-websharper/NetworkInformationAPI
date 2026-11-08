@@ -1,0 +1,22 @@
+type file
+id WebSharper.NetworkInformation
+authors
+    IntelliFactory
+owners
+    IntelliFactory
+repositoryType git
+repositoryUrl https://github.com/dotnet-websharper/NetworkInformationAPI/
+licenseUrl https://github.com/dotnet-websharper/NetworkInformationAPI/blob/main/LICENSE.md
+iconUrl https://github.com/dotnet-websharper/core/raw/websharper50/tools/WebSharper.png
+projectUrl https://github.com/dotnet-websharper/NetworkInformationAPI
+description
+    WebSharper bindings for NetworkInformation
+tags
+    Web JavaScript F# C#
+files
+    ../WebSharper.NetworkInformation.Extensions/bin/Release/netstandard2.0/WebSharper.NetworkInformation.Extensions.dll ==> lib/netstandard2.0
+    ../WebSharper.NetworkInformation.Extensions/bin/Release/netstandard2.0/WebSharper.NetworkInformation.Extensions.xml ==> lib/netstandard2.0
+    ../WebSharper.NetworkInformation/bin/Release/netstandard2.0/WebSharper.NetworkInformation.dll ==> lib/netstandard2.0
+    ../WebSharper.NetworkInformation/bin/Release/netstandard2.0/WebSharper.NetworkInformation.xml ==> lib/netstandard2.0
+dependencies
+        WebSharper ~> LOCKEDVERSION:[3]
